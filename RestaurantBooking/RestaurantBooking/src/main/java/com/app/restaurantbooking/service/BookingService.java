@@ -23,9 +23,6 @@ public class BookingService {
     }
 
     public List<Booking> bookingsOfSpecificDate(String date) {
-/*        date = date + " 00:00:00";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime day = LocalDateTime.parse(date, formatter);*/
         return bookingRepository.findAllByStartDateTime(date);
     }
 }

@@ -34,8 +34,8 @@ public class RestaurantBookingApplication implements CommandLineRunner {
     public void run(String... args) {
         //Adding some pre bookings so that we can test our API's
         Booking booking = Booking.builder()
-                .id(10)
-                .customerName("Kamran Abbasi")
+                .id(1)
+                .customerName("Name 1")
                 .tableSize(10)
                 .startDateTime(LocalDateTime.now())
                 .endDateTime(LocalDateTime.now().plusHours(2))
@@ -43,8 +43,8 @@ public class RestaurantBookingApplication implements CommandLineRunner {
         bookingService.save(booking);
 
         Booking secondBooking = Booking.builder()
-                .id(11)
-                .customerName("Saravanan940")
+                .id(2)
+                .customerName("Name 2")
                 .tableSize(2)
                 .startDateTime(LocalDateTime.now())
                 .endDateTime(LocalDateTime.now().plusHours(2))
